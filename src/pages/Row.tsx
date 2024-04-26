@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import instance from "../axios";
-import { Flex, Image } from "@chakra-ui/react";
+import { Flex, Image, Text } from "@chakra-ui/react";
 import YouTube from "react-youtube";
 import movieTrailer from "movie-trailer";
 
@@ -61,8 +61,10 @@ const Row: React.FC<RowProps> = ({ title, fetchURL, isLargeRow }) => {
   };
 
   return (
-    <Flex paddingX="10px" flexDirection="column" color="#fff">
-      <h2>{title}</h2>
+    <Flex paddingX="10px" flexDirection="column" color="#fff" pt={"20px"}>
+      <Text as={"h1"} fontSize={"24px"} fontFamily={"Lato"} fontWeight={600}>
+        {title}
+      </Text>
       <Flex
         overflowX="scroll"
         overflowY="hidden"
